@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4338529F1B84E55A00B92AE7 /* ESDownloadEarthquakesOperationSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338529C1B84E55A00B92AE7 /* ESDownloadEarthquakesOperationSpecs.m */; };
+		433852A01B84E55A00B92AE7 /* ESGetEarthquakesOperationSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338529D1B84E55A00B92AE7 /* ESGetEarthquakesOperationSpecs.m */; };
+		433852A11B84E55A00B92AE7 /* ESParseEarthquakesOperationSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338529E1B84E55A00B92AE7 /* ESParseEarthquakesOperationSpecs.m */; };
 		438DD6191B843BA90029D92D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6181B843BA90029D92D /* main.m */; };
 		438DD61C1B843BA90029D92D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD61B1B843BA90029D92D /* AppDelegate.m */; };
 		438DD61F1B843BA90029D92D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD61E1B843BA90029D92D /* ViewController.m */; };
@@ -14,6 +17,32 @@
 		438DD6241B843BA90029D92D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438DD6231B843BA90029D92D /* Images.xcassets */; };
 		438DD6271B843BA90029D92D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438DD6251B843BA90029D92D /* LaunchScreen.xib */; };
 		438DD6331B843BA90029D92D /* EarthShakesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6321B843BA90029D92D /* EarthShakesTests.m */; };
+		438DD6461B843F3A0029D92D /* EarthShakeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6451B843F3A0029D92D /* EarthShakeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		438DD64C1B843F3A0029D92D /* EarthShakeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438DD6411B843F3A0029D92D /* EarthShakeKit.framework */; };
+		438DD6551B843F3A0029D92D /* EarthShakeKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6541B843F3A0029D92D /* EarthShakeKitTests.m */; };
+		438DD6581B843F3A0029D92D /* EarthShakeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438DD6411B843F3A0029D92D /* EarthShakeKit.framework */; };
+		438DD6591B843F3A0029D92D /* EarthShakeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 438DD6411B843F3A0029D92D /* EarthShakeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		438DD6681B8443450029D92D /* ESGroupOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6621B8443450029D92D /* ESGroupOperation.h */; };
+		438DD6691B8443450029D92D /* ESGroupOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6631B8443450029D92D /* ESGroupOperation.m */; };
+		438DD66A1B8443450029D92D /* ESOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6641B8443450029D92D /* ESOperation.h */; };
+		438DD66B1B8443450029D92D /* ESOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6651B8443450029D92D /* ESOperation.m */; };
+		438DD66C1B8443450029D92D /* ESURLSessionTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6661B8443450029D92D /* ESURLSessionTaskOperation.h */; };
+		438DD66D1B8443450029D92D /* ESURLSessionTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6671B8443450029D92D /* ESURLSessionTaskOperation.m */; };
+		438DD6701B8444DB0029D92D /* ESURLSessionTaskOperationSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD66F1B8444DB0029D92D /* ESURLSessionTaskOperationSpecs.m */; };
+		438DD6731B8445490029D92D /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438DD6711B8445490029D92D /* Expecta.framework */; };
+		438DD6741B8445490029D92D /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438DD6721B8445490029D92D /* Specta.framework */; };
+		438DD68E1B8448DF0029D92D /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 438DD68C1B8448DF0029D92D /* DataModel.xcdatamodeld */; };
+		438DD6961B8449020029D92D /* ESDownloadEarthquakesOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6901B8449020029D92D /* ESDownloadEarthquakesOperation.h */; };
+		438DD6971B8449020029D92D /* ESDownloadEarthquakesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6911B8449020029D92D /* ESDownloadEarthquakesOperation.m */; };
+		438DD6981B8449020029D92D /* ESGetEarthquakesOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6921B8449020029D92D /* ESGetEarthquakesOperation.h */; };
+		438DD6991B8449020029D92D /* ESGetEarthquakesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6931B8449020029D92D /* ESGetEarthquakesOperation.m */; };
+		438DD69A1B8449020029D92D /* ESParseEarthquakesOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6941B8449020029D92D /* ESParseEarthquakesOperation.h */; };
+		438DD69B1B8449020029D92D /* ESParseEarthquakesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6951B8449020029D92D /* ESParseEarthquakesOperation.m */; };
+		438DD69F1B8449760029D92D /* ESPersistenceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD69E1B8449760029D92D /* ESPersistenceHelper.m */; };
+		438DD6A21B8449AA0029D92D /* ESPersistenceController.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6A01B8449AA0029D92D /* ESPersistenceController.h */; };
+		438DD6A31B8449AA0029D92D /* ESPersistenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6A11B8449AA0029D92D /* ESPersistenceController.m */; };
+		438DD6A61B844D470029D92D /* ESEarthquake.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6A41B844D470029D92D /* ESEarthquake.h */; };
+		438DD6A71B844D470029D92D /* ESEarthquake.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6A51B844D470029D92D /* ESEarthquake.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,9 +53,47 @@
 			remoteGlobalIDString = 438DD6121B843BA90029D92D;
 			remoteInfo = EarthShakes;
 		};
+		438DD64D1B843F3A0029D92D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 438DD60B1B843BA90029D92D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 438DD6401B843F3A0029D92D;
+			remoteInfo = EarthShakeKit;
+		};
+		438DD64F1B843F3A0029D92D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 438DD60B1B843BA90029D92D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 438DD6121B843BA90029D92D;
+			remoteInfo = EarthShakes;
+		};
+		438DD6561B843F3A0029D92D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 438DD60B1B843BA90029D92D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 438DD6401B843F3A0029D92D;
+			remoteInfo = EarthShakeKit;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		438DD65D1B843F3A0029D92D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				438DD6591B843F3A0029D92D /* EarthShakeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4338529C1B84E55A00B92AE7 /* ESDownloadEarthquakesOperationSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESDownloadEarthquakesOperationSpecs.m; sourceTree = "<group>"; };
+		4338529D1B84E55A00B92AE7 /* ESGetEarthquakesOperationSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESGetEarthquakesOperationSpecs.m; sourceTree = "<group>"; };
+		4338529E1B84E55A00B92AE7 /* ESParseEarthquakesOperationSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESParseEarthquakesOperationSpecs.m; sourceTree = "<group>"; };
 		438DD6131B843BA90029D92D /* EarthShakes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarthShakes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		438DD6171B843BA90029D92D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		438DD6181B843BA90029D92D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +107,34 @@
 		438DD62C1B843BA90029D92D /* EarthShakesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarthShakesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		438DD6311B843BA90029D92D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		438DD6321B843BA90029D92D /* EarthShakesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EarthShakesTests.m; sourceTree = "<group>"; };
+		438DD6411B843F3A0029D92D /* EarthShakeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EarthShakeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		438DD6441B843F3A0029D92D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		438DD6451B843F3A0029D92D /* EarthShakeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EarthShakeKit.h; sourceTree = "<group>"; };
+		438DD64B1B843F3A0029D92D /* EarthShakeKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarthShakeKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		438DD6531B843F3A0029D92D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		438DD6541B843F3A0029D92D /* EarthShakeKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EarthShakeKitTests.m; sourceTree = "<group>"; };
+		438DD6621B8443450029D92D /* ESGroupOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESGroupOperation.h; sourceTree = "<group>"; };
+		438DD6631B8443450029D92D /* ESGroupOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESGroupOperation.m; sourceTree = "<group>"; };
+		438DD6641B8443450029D92D /* ESOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESOperation.h; sourceTree = "<group>"; };
+		438DD6651B8443450029D92D /* ESOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESOperation.m; sourceTree = "<group>"; };
+		438DD6661B8443450029D92D /* ESURLSessionTaskOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESURLSessionTaskOperation.h; sourceTree = "<group>"; };
+		438DD6671B8443450029D92D /* ESURLSessionTaskOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESURLSessionTaskOperation.m; sourceTree = "<group>"; };
+		438DD66F1B8444DB0029D92D /* ESURLSessionTaskOperationSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESURLSessionTaskOperationSpecs.m; sourceTree = "<group>"; };
+		438DD6711B8445490029D92D /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = "<group>"; };
+		438DD6721B8445490029D92D /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = Carthage/Build/iOS/Specta.framework; sourceTree = "<group>"; };
+		438DD68D1B8448DF0029D92D /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		438DD6901B8449020029D92D /* ESDownloadEarthquakesOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESDownloadEarthquakesOperation.h; sourceTree = "<group>"; };
+		438DD6911B8449020029D92D /* ESDownloadEarthquakesOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESDownloadEarthquakesOperation.m; sourceTree = "<group>"; };
+		438DD6921B8449020029D92D /* ESGetEarthquakesOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESGetEarthquakesOperation.h; sourceTree = "<group>"; };
+		438DD6931B8449020029D92D /* ESGetEarthquakesOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESGetEarthquakesOperation.m; sourceTree = "<group>"; };
+		438DD6941B8449020029D92D /* ESParseEarthquakesOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESParseEarthquakesOperation.h; sourceTree = "<group>"; };
+		438DD6951B8449020029D92D /* ESParseEarthquakesOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESParseEarthquakesOperation.m; sourceTree = "<group>"; };
+		438DD69D1B8449760029D92D /* ESPersistenceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPersistenceHelper.h; sourceTree = "<group>"; };
+		438DD69E1B8449760029D92D /* ESPersistenceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPersistenceHelper.m; sourceTree = "<group>"; };
+		438DD6A01B8449AA0029D92D /* ESPersistenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPersistenceController.h; sourceTree = "<group>"; };
+		438DD6A11B8449AA0029D92D /* ESPersistenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPersistenceController.m; sourceTree = "<group>"; };
+		438DD6A41B844D470029D92D /* ESEarthquake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ESEarthquake.h; path = Models/ESEarthquake.h; sourceTree = "<group>"; };
+		438DD6A51B844D470029D92D /* ESEarthquake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ESEarthquake.m; path = Models/ESEarthquake.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438DD6581B843F3A0029D92D /* EarthShakeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,14 +153,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		438DD63D1B843F3A0029D92D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		438DD6481B843F3A0029D92D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				438DD64C1B843F3A0029D92D /* EarthShakeKit.framework in Frameworks */,
+				438DD6731B8445490029D92D /* Expecta.framework in Frameworks */,
+				438DD6741B8445490029D92D /* Specta.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4338529B1B84E55A00B92AE7 /* App Operations */ = {
+			isa = PBXGroup;
+			children = (
+				4338529C1B84E55A00B92AE7 /* ESDownloadEarthquakesOperationSpecs.m */,
+				4338529D1B84E55A00B92AE7 /* ESGetEarthquakesOperationSpecs.m */,
+				4338529E1B84E55A00B92AE7 /* ESParseEarthquakesOperationSpecs.m */,
+			);
+			path = "App Operations";
+			sourceTree = "<group>";
+		};
 		438DD60A1B843BA90029D92D = {
 			isa = PBXGroup;
 			children = (
 				438DD6151B843BA90029D92D /* EarthShakes */,
 				438DD62F1B843BA90029D92D /* EarthShakesTests */,
+				438DD6421B843F3A0029D92D /* EarthShakeKit */,
+				438DD6511B843F3A0029D92D /* EarthShakeKitTests */,
+				438DD6761B8445920029D92D /* Frameworks */,
 				438DD6141B843BA90029D92D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +200,8 @@
 			children = (
 				438DD6131B843BA90029D92D /* EarthShakes.app */,
 				438DD62C1B843BA90029D92D /* EarthShakesTests.xctest */,
+				438DD6411B843F3A0029D92D /* EarthShakeKit.framework */,
+				438DD64B1B843F3A0029D92D /* EarthShakeKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,7 +247,130 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		438DD6421B843F3A0029D92D /* EarthShakeKit */ = {
+			isa = PBXGroup;
+			children = (
+				438DD68F1B8449020029D92D /* App Operations */,
+				438DD68B1B8448740029D92D /* Models */,
+				438DD6611B8443450029D92D /* Operations */,
+				438DD6451B843F3A0029D92D /* EarthShakeKit.h */,
+				438DD6431B843F3A0029D92D /* Supporting Files */,
+			);
+			path = EarthShakeKit;
+			sourceTree = "<group>";
+		};
+		438DD6431B843F3A0029D92D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				438DD6441B843F3A0029D92D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		438DD6511B843F3A0029D92D /* EarthShakeKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				438DD69C1B84496D0029D92D /* Models */,
+				438DD6541B843F3A0029D92D /* EarthShakeKitTests.m */,
+				4338529B1B84E55A00B92AE7 /* App Operations */,
+				438DD66E1B8444DB0029D92D /* Operations */,
+				438DD6521B843F3A0029D92D /* Supporting Files */,
+			);
+			path = EarthShakeKitTests;
+			sourceTree = "<group>";
+		};
+		438DD6521B843F3A0029D92D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				438DD6531B843F3A0029D92D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		438DD6611B8443450029D92D /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				438DD6621B8443450029D92D /* ESGroupOperation.h */,
+				438DD6631B8443450029D92D /* ESGroupOperation.m */,
+				438DD6641B8443450029D92D /* ESOperation.h */,
+				438DD6651B8443450029D92D /* ESOperation.m */,
+				438DD6661B8443450029D92D /* ESURLSessionTaskOperation.h */,
+				438DD6671B8443450029D92D /* ESURLSessionTaskOperation.m */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		438DD66E1B8444DB0029D92D /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				438DD66F1B8444DB0029D92D /* ESURLSessionTaskOperationSpecs.m */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		438DD6761B8445920029D92D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438DD6711B8445490029D92D /* Expecta.framework */,
+				438DD6721B8445490029D92D /* Specta.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438DD68B1B8448740029D92D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				438DD6A41B844D470029D92D /* ESEarthquake.h */,
+				438DD6A51B844D470029D92D /* ESEarthquake.m */,
+				438DD6A01B8449AA0029D92D /* ESPersistenceController.h */,
+				438DD6A11B8449AA0029D92D /* ESPersistenceController.m */,
+				438DD68C1B8448DF0029D92D /* DataModel.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		438DD68F1B8449020029D92D /* App Operations */ = {
+			isa = PBXGroup;
+			children = (
+				438DD6901B8449020029D92D /* ESDownloadEarthquakesOperation.h */,
+				438DD6911B8449020029D92D /* ESDownloadEarthquakesOperation.m */,
+				438DD6921B8449020029D92D /* ESGetEarthquakesOperation.h */,
+				438DD6931B8449020029D92D /* ESGetEarthquakesOperation.m */,
+				438DD6941B8449020029D92D /* ESParseEarthquakesOperation.h */,
+				438DD6951B8449020029D92D /* ESParseEarthquakesOperation.m */,
+			);
+			path = "App Operations";
+			sourceTree = "<group>";
+		};
+		438DD69C1B84496D0029D92D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				438DD69D1B8449760029D92D /* ESPersistenceHelper.h */,
+				438DD69E1B8449760029D92D /* ESPersistenceHelper.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		438DD63E1B843F3A0029D92D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				438DD66A1B8443450029D92D /* ESOperation.h in Headers */,
+				438DD66C1B8443450029D92D /* ESURLSessionTaskOperation.h in Headers */,
+				438DD6981B8449020029D92D /* ESGetEarthquakesOperation.h in Headers */,
+				438DD6461B843F3A0029D92D /* EarthShakeKit.h in Headers */,
+				438DD69A1B8449020029D92D /* ESParseEarthquakesOperation.h in Headers */,
+				438DD6A21B8449AA0029D92D /* ESPersistenceController.h in Headers */,
+				438DD6A61B844D470029D92D /* ESEarthquake.h in Headers */,
+				438DD6961B8449020029D92D /* ESDownloadEarthquakesOperation.h in Headers */,
+				438DD6681B8443450029D92D /* ESGroupOperation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		438DD6121B843BA90029D92D /* EarthShakes */ = {
@@ -129,10 +380,12 @@
 				438DD60F1B843BA90029D92D /* Sources */,
 				438DD6101B843BA90029D92D /* Frameworks */,
 				438DD6111B843BA90029D92D /* Resources */,
+				438DD65D1B843F3A0029D92D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				438DD6571B843F3A0029D92D /* PBXTargetDependency */,
 			);
 			name = EarthShakes;
 			productName = EarthShakes;
@@ -157,6 +410,44 @@
 			productReference = 438DD62C1B843BA90029D92D /* EarthShakesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		438DD6401B843F3A0029D92D /* EarthShakeKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 438DD65A1B843F3A0029D92D /* Build configuration list for PBXNativeTarget "EarthShakeKit" */;
+			buildPhases = (
+				438DD63C1B843F3A0029D92D /* Sources */,
+				438DD63D1B843F3A0029D92D /* Frameworks */,
+				438DD63E1B843F3A0029D92D /* Headers */,
+				438DD63F1B843F3A0029D92D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EarthShakeKit;
+			productName = EarthShakeKit;
+			productReference = 438DD6411B843F3A0029D92D /* EarthShakeKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		438DD64A1B843F3A0029D92D /* EarthShakeKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 438DD65E1B843F3A0029D92D /* Build configuration list for PBXNativeTarget "EarthShakeKitTests" */;
+			buildPhases = (
+				438DD6471B843F3A0029D92D /* Sources */,
+				438DD6481B843F3A0029D92D /* Frameworks */,
+				438DD6491B843F3A0029D92D /* Resources */,
+				438DD6751B84455D0029D92D /* Embed Carthage Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				438DD64E1B843F3A0029D92D /* PBXTargetDependency */,
+				438DD6501B843F3A0029D92D /* PBXTargetDependency */,
+			);
+			name = EarthShakeKitTests;
+			productName = EarthShakeKitTests;
+			productReference = 438DD64B1B843F3A0029D92D /* EarthShakeKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,6 +461,13 @@
 						CreatedOnToolsVersion = 6.4;
 					};
 					438DD62B1B843BA90029D92D = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 438DD6121B843BA90029D92D;
+					};
+					438DD6401B843F3A0029D92D = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					438DD64A1B843F3A0029D92D = {
 						CreatedOnToolsVersion = 6.4;
 						TestTargetID = 438DD6121B843BA90029D92D;
 					};
@@ -190,6 +488,8 @@
 			targets = (
 				438DD6121B843BA90029D92D /* EarthShakes */,
 				438DD62B1B843BA90029D92D /* EarthShakesTests */,
+				438DD6401B843F3A0029D92D /* EarthShakeKit */,
+				438DD64A1B843F3A0029D92D /* EarthShakeKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -212,7 +512,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		438DD63F1B843F3A0029D92D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		438DD6491B843F3A0029D92D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		438DD6751B84455D0029D92D /* Embed Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Specta.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Expecta.framework",
+			);
+			name = "Embed Carthage Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		438DD60F1B843BA90029D92D /* Sources */ = {
@@ -233,6 +566,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		438DD63C1B843F3A0029D92D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				438DD66B1B8443450029D92D /* ESOperation.m in Sources */,
+				438DD69B1B8449020029D92D /* ESParseEarthquakesOperation.m in Sources */,
+				438DD6A31B8449AA0029D92D /* ESPersistenceController.m in Sources */,
+				438DD6691B8443450029D92D /* ESGroupOperation.m in Sources */,
+				438DD6A71B844D470029D92D /* ESEarthquake.m in Sources */,
+				438DD68E1B8448DF0029D92D /* DataModel.xcdatamodeld in Sources */,
+				438DD6971B8449020029D92D /* ESDownloadEarthquakesOperation.m in Sources */,
+				438DD66D1B8443450029D92D /* ESURLSessionTaskOperation.m in Sources */,
+				438DD6991B8449020029D92D /* ESGetEarthquakesOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		438DD6471B843F3A0029D92D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				438DD69F1B8449760029D92D /* ESPersistenceHelper.m in Sources */,
+				4338529F1B84E55A00B92AE7 /* ESDownloadEarthquakesOperationSpecs.m in Sources */,
+				433852A01B84E55A00B92AE7 /* ESGetEarthquakesOperationSpecs.m in Sources */,
+				438DD6701B8444DB0029D92D /* ESURLSessionTaskOperationSpecs.m in Sources */,
+				438DD6551B843F3A0029D92D /* EarthShakeKitTests.m in Sources */,
+				433852A11B84E55A00B92AE7 /* ESParseEarthquakesOperationSpecs.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -240,6 +602,21 @@
 			isa = PBXTargetDependency;
 			target = 438DD6121B843BA90029D92D /* EarthShakes */;
 			targetProxy = 438DD62D1B843BA90029D92D /* PBXContainerItemProxy */;
+		};
+		438DD64E1B843F3A0029D92D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 438DD6401B843F3A0029D92D /* EarthShakeKit */;
+			targetProxy = 438DD64D1B843F3A0029D92D /* PBXContainerItemProxy */;
+		};
+		438DD6501B843F3A0029D92D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 438DD6121B843BA90029D92D /* EarthShakes */;
+			targetProxy = 438DD64F1B843F3A0029D92D /* PBXContainerItemProxy */;
+		};
+		438DD6571B843F3A0029D92D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 438DD6401B843F3A0029D92D /* EarthShakeKit */;
+			targetProxy = 438DD6561B843F3A0029D92D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -399,6 +776,80 @@
 			};
 			name = Release;
 		};
+		438DD65B1B843F3A0029D92D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EarthShakeKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		438DD65C1B843F3A0029D92D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EarthShakeKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		438DD65F1B843F3A0029D92D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EarthShakeKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EarthShakes.app/EarthShakes";
+			};
+			name = Debug;
+		};
+		438DD6601B843F3A0029D92D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = EarthShakeKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EarthShakes.app/EarthShakes";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -418,6 +869,7 @@
 				438DD6381B843BA90029D92D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		438DD6391B843BA90029D92D /* Build configuration list for PBXNativeTarget "EarthShakesTests" */ = {
 			isa = XCConfigurationList;
@@ -426,8 +878,41 @@
 				438DD63B1B843BA90029D92D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		438DD65A1B843F3A0029D92D /* Build configuration list for PBXNativeTarget "EarthShakeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				438DD65B1B843F3A0029D92D /* Debug */,
+				438DD65C1B843F3A0029D92D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		438DD65E1B843F3A0029D92D /* Build configuration list for PBXNativeTarget "EarthShakeKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				438DD65F1B843F3A0029D92D /* Debug */,
+				438DD6601B843F3A0029D92D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		438DD68C1B8448DF0029D92D /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				438DD68D1B8448DF0029D92D /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 438DD68D1B8448DF0029D92D /* DataModel.xcdatamodel */;
+			name = DataModel.xcdatamodeld;
+			path = Models/DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 438DD60B1B843BA90029D92D /* Project object */;
 }
