@@ -143,7 +143,7 @@
     [self.mapView setVisibleMapRect:zoomRect animated:YES];
 }
 
-- (void)selectEarthquake:(ESEarthquake *)earthquake
+- (void)zoomMapViewToEarthquake:(ESEarthquake *)earthquake
 {
     [self.mapView.annotations enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         if ([obj isKindOfClass:[EarthquakeAnnotation class]])

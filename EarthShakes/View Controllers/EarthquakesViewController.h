@@ -18,6 +18,6 @@
 @property (nonatomic, strong) MKMapView *mapView;
 @property (nonatomic, strong) UICollectionView *collectionView;
 
-- (void)selectEarthquake:(ESEarthquake *)earthquake;
+- (void)zoomMapViewToEarthquake:(ESEarthquake *)earthquake;
 
 @end
