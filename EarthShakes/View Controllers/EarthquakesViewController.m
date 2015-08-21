@@ -6,18 +6,15 @@
 //  Copyright (c) 2015 Nate Armstrong. All rights reserved.
 //
 
-@import MapKit;
-@import EarthShakeKit;
-
 #import "EarthquakesViewController.h"
 #import "EarthquakesViewController+CollectionView.h"
+#import "EarthquakesViewController+MapView.h"
 #import "EarthquakeCollectionViewCell.h"
 #import "EarthquakesFlowLayout.h"
+#import "EarthquakeAnnotation.h"
 
 @interface EarthquakesViewController ()
 
-@property (nonatomic, strong) MKMapView *mapView;
-@property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSOperationQueue *queue;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
@@ -32,7 +29,6 @@
 
 - (void)setup
 {
-    self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
     [self layoutMapView];
     [self layoutCollectionView];
 }
@@ -45,6 +41,7 @@
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake(0, 0);
     MKCoordinateSpan span = MKCoordinateSpanMake(1, 1);
     mapView.region = MKCoordinateRegionMake(center, span);
+    mapView.delegate = self;
     [view addSubview:mapView];
 
     // constrain left and right
@@ -126,6 +123,25 @@
 	NSError *fetchError = nil;
 	[self.fetchedResultsController performFetch:&fetchError];
     [self.collectionView reloadData];
+    [self reloadMap];
+}
+
+- (void)reloadMap
+{
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    __block MKMapRect zoomRect = MKMapRectNull;
+    [[self.fetchedResultsController fetchedObjects] enumerateObjectsUsingBlock:^(ESEarthquake *earthquake, NSUInteger idx, BOOL *stop) {
+        // add annotation
+        CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake([earthquake.latitude doubleValue], [earthquake.longitude doubleValue]);
+        EarthquakeAnnotation *annotation = [[EarthquakeAnnotation alloc] initWithCoordinates:coordinate placeName:earthquake.place magnitude:[earthquake magnitudeCategory]];
+        [self.mapView addAnnotation:annotation];
+
+        // keep track of zoom rect
+        MKMapPoint annotationPoint = MKMapPointForCoordinate(annotation.coordinate);
+        MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0.1, 0.1);
+        zoomRect = MKMapRectUnion(zoomRect, pointRect);
+    }];
+    [self.mapView setVisibleMapRect:zoomRect animated:YES];
 }
 
 @end

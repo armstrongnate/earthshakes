@@ -34,4 +34,24 @@ NSString * const EarthquakeCellReuseIdentifier = @"EarthquakeCell";
     return cell;
 }
 
+
+#pragma MARK - UICollectionViewDelegate
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
+{
+    static CGFloat const height = 60;
+    CGFloat width = CGRectGetWidth(collectionView.frame) / 3;
+    width -= 10;
+    return CGSizeMake(width, height);
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    ESEarthquake *earthquake = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    CLLocationCoordinate2D center = CLLocationCoordinate2DMake([earthquake.latitude doubleValue], [earthquake.longitude doubleValue]);
+    MKCoordinateSpan span = MKCoordinateSpanMake(3, 3);
+    MKCoordinateRegion region = MKCoordinateRegionMake(center, span);
+    [self.mapView setRegion:region animated:YES];
+}
+
 @end

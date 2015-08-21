@@ -8,11 +8,13 @@
 
 @import UIKit;
 @import CoreData;
+@import MapKit;
 
 @interface EarthquakesViewController : UIViewController
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic, strong) UIDynamicAnimator *animator;
 @property (nonatomic, strong) NSManagedObjectContext *context;
+@property (nonatomic, strong) MKMapView *mapView;
+@property (nonatomic, strong) UICollectionView *collectionView;
 
 @end

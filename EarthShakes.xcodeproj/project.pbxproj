@@ -43,6 +43,8 @@
 		438DD6A31B8449AA0029D92D /* ESPersistenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6A11B8449AA0029D92D /* ESPersistenceController.m */; };
 		438DD6A61B844D470029D92D /* ESEarthquake.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6A41B844D470029D92D /* ESEarthquake.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		438DD6A71B844D470029D92D /* ESEarthquake.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6A51B844D470029D92D /* ESEarthquake.m */; };
+		43CA84141B87D14400C8E92B /* EarthquakesViewController+MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CA84131B87D14400C8E92B /* EarthquakesViewController+MapView.m */; };
+		43CA84171B87D1E800C8E92B /* UIImage+MagnitudeAnnotationImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CA84161B87D1E800C8E92B /* UIImage+MagnitudeAnnotationImages.m */; };
 		43F94C661B857D41006C4C86 /* EarthquakesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F94C651B857D41006C4C86 /* EarthquakesViewController.m */; };
 		43F94C691B8583BD006C4C86 /* EarthquakesViewController+CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F94C681B8583BD006C4C86 /* EarthquakesViewController+CollectionView.m */; };
 		43F94C6D1B858470006C4C86 /* EarthquakeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F94C6C1B858470006C4C86 /* EarthquakeCollectionViewCell.m */; };
@@ -50,6 +52,7 @@
 		43F94C741B86B4E9006C4C86 /* EarthquakesFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F94C731B86B4E9006C4C86 /* EarthquakesFlowLayout.m */; };
 		43F94C781B8784E3006C4C86 /* UIColor+MagnitudeColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F94C771B8784E3006C4C86 /* UIColor+MagnitudeColors.m */; };
 		43F94C7A1B878A68006C4C86 /* ESEarthquakeSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F94C791B878A68006C4C86 /* ESEarthquakeSpecs.m */; };
+		43F94C811B87B706006C4C86 /* EarthquakeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F94C801B87B706006C4C86 /* EarthquakeAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +146,10 @@
 		438DD6A11B8449AA0029D92D /* ESPersistenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPersistenceController.m; sourceTree = "<group>"; };
 		438DD6A41B844D470029D92D /* ESEarthquake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ESEarthquake.h; path = Models/ESEarthquake.h; sourceTree = "<group>"; };
 		438DD6A51B844D470029D92D /* ESEarthquake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ESEarthquake.m; path = Models/ESEarthquake.m; sourceTree = "<group>"; };
+		43CA84121B87D14400C8E92B /* EarthquakesViewController+MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EarthquakesViewController+MapView.h"; path = "View Controllers/EarthquakesViewController+MapView.h"; sourceTree = "<group>"; };
+		43CA84131B87D14400C8E92B /* EarthquakesViewController+MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "EarthquakesViewController+MapView.m"; path = "View Controllers/EarthquakesViewController+MapView.m"; sourceTree = "<group>"; };
+		43CA84151B87D1E800C8E92B /* UIImage+MagnitudeAnnotationImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+MagnitudeAnnotationImages.h"; path = "Helpers/UIImage+MagnitudeAnnotationImages.h"; sourceTree = "<group>"; };
+		43CA84161B87D1E800C8E92B /* UIImage+MagnitudeAnnotationImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MagnitudeAnnotationImages.m"; path = "Helpers/UIImage+MagnitudeAnnotationImages.m"; sourceTree = "<group>"; };
 		43F94C641B857D41006C4C86 /* EarthquakesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EarthquakesViewController.h; path = "View Controllers/EarthquakesViewController.h"; sourceTree = "<group>"; };
 		43F94C651B857D41006C4C86 /* EarthquakesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EarthquakesViewController.m; path = "View Controllers/EarthquakesViewController.m"; sourceTree = "<group>"; };
 		43F94C671B8583BD006C4C86 /* EarthquakesViewController+CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EarthquakesViewController+CollectionView.h"; path = "View Controllers/EarthquakesViewController+CollectionView.h"; sourceTree = "<group>"; };
@@ -156,6 +163,8 @@
 		43F94C761B8784E3006C4C86 /* UIColor+MagnitudeColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+MagnitudeColors.h"; path = "Helpers/UIColor+MagnitudeColors.h"; sourceTree = "<group>"; };
 		43F94C771B8784E3006C4C86 /* UIColor+MagnitudeColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MagnitudeColors.m"; path = "Helpers/UIColor+MagnitudeColors.m"; sourceTree = "<group>"; };
 		43F94C791B878A68006C4C86 /* ESEarthquakeSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ESEarthquakeSpecs.m; path = Models/ESEarthquakeSpecs.m; sourceTree = "<group>"; };
+		43F94C7F1B87B706006C4C86 /* EarthquakeAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EarthquakeAnnotation.h; path = Views/EarthquakeAnnotation.h; sourceTree = "<group>"; };
+		43F94C801B87B706006C4C86 /* EarthquakeAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EarthquakeAnnotation.m; path = Views/EarthquakeAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,6 +394,8 @@
 				43F94C651B857D41006C4C86 /* EarthquakesViewController.m */,
 				43F94C671B8583BD006C4C86 /* EarthquakesViewController+CollectionView.h */,
 				43F94C681B8583BD006C4C86 /* EarthquakesViewController+CollectionView.m */,
+				43CA84121B87D14400C8E92B /* EarthquakesViewController+MapView.h */,
+				43CA84131B87D14400C8E92B /* EarthquakesViewController+MapView.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -396,6 +407,8 @@
 				43F94C6C1B858470006C4C86 /* EarthquakeCollectionViewCell.m */,
 				43F94C721B86B4E9006C4C86 /* EarthquakesFlowLayout.h */,
 				43F94C731B86B4E9006C4C86 /* EarthquakesFlowLayout.m */,
+				43F94C7F1B87B706006C4C86 /* EarthquakeAnnotation.h */,
+				43F94C801B87B706006C4C86 /* EarthquakeAnnotation.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -414,6 +427,8 @@
 			children = (
 				43F94C761B8784E3006C4C86 /* UIColor+MagnitudeColors.h */,
 				43F94C771B8784E3006C4C86 /* UIColor+MagnitudeColors.m */,
+				43CA84151B87D1E800C8E92B /* UIImage+MagnitudeAnnotationImages.h */,
+				43CA84161B87D1E800C8E92B /* UIImage+MagnitudeAnnotationImages.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -626,7 +641,10 @@
 				438DD61C1B843BA90029D92D /* AppDelegate.m in Sources */,
 				438DD6191B843BA90029D92D /* main.m in Sources */,
 				43F94C701B859553006C4C86 /* EarthquakeBehavior.m in Sources */,
+				43F94C811B87B706006C4C86 /* EarthquakeAnnotation.m in Sources */,
 				43F94C741B86B4E9006C4C86 /* EarthquakesFlowLayout.m in Sources */,
+				43CA84171B87D1E800C8E92B /* UIImage+MagnitudeAnnotationImages.m in Sources */,
+				43CA84141B87D14400C8E92B /* EarthquakesViewController+MapView.m in Sources */,
 				43F94C661B857D41006C4C86 /* EarthquakesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
