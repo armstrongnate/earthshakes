@@ -132,8 +132,7 @@
     __block MKMapRect zoomRect = MKMapRectNull;
     [[self.fetchedResultsController fetchedObjects] enumerateObjectsUsingBlock:^(ESEarthquake *earthquake, NSUInteger idx, BOOL *stop) {
         // add annotation
-        CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake([earthquake.latitude doubleValue], [earthquake.longitude doubleValue]);
-        EarthquakeAnnotation *annotation = [[EarthquakeAnnotation alloc] initWithCoordinates:coordinate placeName:earthquake.place magnitude:[earthquake magnitudeCategory]];
+        EarthquakeAnnotation *annotation = [[EarthquakeAnnotation alloc] initWithEarthquake:earthquake];
         [self.mapView addAnnotation:annotation];
 
         // keep track of zoom rect
@@ -150,7 +149,7 @@
         if ([obj isKindOfClass:[EarthquakeAnnotation class]])
         {
             EarthquakeAnnotation *annotation = (EarthquakeAnnotation *)obj;
-            if ([annotation.placeName isEqualToString:earthquake.place])
+            if ([annotation.title isEqualToString:earthquake.place])
             {
                 [self.mapView selectAnnotation:annotation animated:YES];
                 *stop = YES;

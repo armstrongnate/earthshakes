@@ -11,22 +11,20 @@
 @interface EarthquakeAnnotation ()
 
 @property (nonatomic, readwrite) CLLocationCoordinate2D coordinate;
-@property (nonatomic, readwrite) EarthquakeMagnitude magnitude;
-@property (nonatomic, readwrite) NSString *placeName;
 @property (nonatomic, readwrite) NSString *title;
 
 @end
 
 @implementation EarthquakeAnnotation
 
-- (instancetype)initWithCoordinates:(CLLocationCoordinate2D)coordinate placeName:(NSString *)placeName magnitude:(EarthquakeMagnitude)magnitude
+- (instancetype)initWithEarthquake:(ESEarthquake *)earthquake
 {
     if (!(self = [super init])) return nil;
 
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake([earthquake.latitude doubleValue], [earthquake.longitude doubleValue]);
     self.coordinate = coordinate;
-    self.placeName = placeName;
-    self.magnitude = magnitude;
-    self.title = placeName;
+    self.title = earthquake.place;
+    self.earthquake = earthquake;
 
     return self;
 }

@@ -12,6 +12,8 @@
 
 @implementation EarthquakesViewController (MapView)
 
+#pragma mark - MKMapViewDelegate
+
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
     MKAnnotationView *annotationView = nil;
@@ -26,11 +28,24 @@
                                                           reuseIdentifier:identifier];
         }
         annotationView.canShowCallout = YES;
-        annotationView.image = [UIImage annotationImageForMagnitude:((EarthquakeAnnotation *)annotation).magnitude];
+        EarthquakeAnnotation *earthquakeAnnotation = (EarthquakeAnnotation *)annotation;
+        annotationView.image = [UIImage annotationImageForMagnitude:[earthquakeAnnotation.earthquake magnitudeCategory]];
         annotationView.leftCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeInfoLight];
     }
 
     return annotationView;
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    if ([view.annotation isKindOfClass:[EarthquakeAnnotation class]])
+    {
+        EarthquakeAnnotation *annotation = view.annotation;
+        NSIndexPath *indexPath = [self.fetchedResultsController indexPathForObject:annotation.earthquake];
+        if (indexPath != nil) {
+            [self.collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:UICollectionViewScrollPositionTop];
+        }
+    }
 }
 
 @end

@@ -35,6 +35,8 @@
 
 - (void)setup
 {
+    self.layer.borderColor = [UIColor colorWithRed:74/255.0 green:144/255.0 blue:226/255.0 alpha:1.0].CGColor;
+    self.layer.borderWidth = 0;
     [self.contentView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.contentView addSubview:self.magnitudeLabel];
     [self.contentView addSubview:self.placeLabel];
@@ -48,6 +50,12 @@
     self.backgroundColor = [UIColor colorForEarthquakeMagnitude:magnitude];
     self.magnitudeLabel.text = [earthquake.magnitude stringValue];
     self.placeLabel.text = earthquake.place;
+}
+
+- (void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+    self.layer.borderWidth = selected ? 4 : 0;
 }
 
 - (UILabel *)magnitudeLabel

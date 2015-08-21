@@ -12,11 +12,10 @@
 
 @interface EarthquakeAnnotation : NSObject <MKAnnotation>
 
-- (instancetype)initWithCoordinates:(CLLocationCoordinate2D)coordinate placeName:(NSString *)placeName magnitude:(EarthquakeMagnitude)magnitude;
+- (instancetype)initWithEarthquake:(ESEarthquake *)earthquake;
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
-@property (nonatomic, readonly) EarthquakeMagnitude magnitude;
-@property (nonatomic, readonly) NSString *placeName;
 @property (nonatomic, readonly, copy) NSString *title;
+@property (nonatomic, strong) ESEarthquake *earthquake;
 
 @end
