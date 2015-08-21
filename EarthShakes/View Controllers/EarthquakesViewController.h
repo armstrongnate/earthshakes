@@ -9,6 +9,7 @@
 @import UIKit;
 @import CoreData;
 @import MapKit;
+@import EarthShakeKit;
 
 @interface EarthquakesViewController : UIViewController
 
@@ -16,5 +17,7 @@
 @property (nonatomic, strong) NSManagedObjectContext *context;
 @property (nonatomic, strong) MKMapView *mapView;
 @property (nonatomic, strong) UICollectionView *collectionView;
+
+- (void)selectEarthquake:(ESEarthquake *)earthquake;
 
 @end

@@ -13,6 +13,7 @@
 @property (nonatomic, readwrite) CLLocationCoordinate2D coordinate;
 @property (nonatomic, readwrite) EarthquakeMagnitude magnitude;
 @property (nonatomic, readwrite) NSString *placeName;
+@property (nonatomic, readwrite) NSString *title;
 
 @end
 
@@ -25,6 +26,7 @@
     self.coordinate = coordinate;
     self.placeName = placeName;
     self.magnitude = magnitude;
+    self.title = placeName;
 
     return self;
 }

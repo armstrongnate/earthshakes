@@ -17,5 +17,6 @@
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 @property (nonatomic, readonly) EarthquakeMagnitude magnitude;
 @property (nonatomic, readonly) NSString *placeName;
+@property (nonatomic, readonly, copy) NSString *title;
 
 @end

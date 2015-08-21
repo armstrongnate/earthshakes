@@ -51,7 +51,8 @@ NSString * const EarthquakeCellReuseIdentifier = @"EarthquakeCell";
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake([earthquake.latitude doubleValue], [earthquake.longitude doubleValue]);
     MKCoordinateSpan span = MKCoordinateSpanMake(3, 3);
     MKCoordinateRegion region = MKCoordinateRegionMake(center, span);
-    [self.mapView setRegion:region animated:YES];
+    [self.mapView setRegion:region animated:NO];
+    [self selectEarthquake:earthquake];
 }
 
 @end

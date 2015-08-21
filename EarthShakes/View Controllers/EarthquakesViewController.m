@@ -144,4 +144,19 @@
     [self.mapView setVisibleMapRect:zoomRect animated:YES];
 }
 
+- (void)selectEarthquake:(ESEarthquake *)earthquake
+{
+    [self.mapView.annotations enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if ([obj isKindOfClass:[EarthquakeAnnotation class]])
+        {
+            EarthquakeAnnotation *annotation = (EarthquakeAnnotation *)obj;
+            if ([annotation.placeName isEqualToString:earthquake.place])
+            {
+                [self.mapView selectAnnotation:annotation animated:YES];
+                *stop = YES;
+            }
+        }
+    }];
+}
+
 @end

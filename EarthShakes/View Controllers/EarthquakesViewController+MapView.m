@@ -25,8 +25,9 @@
             annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation
                                                           reuseIdentifier:identifier];
         }
-        annotationView.canShowCallout = NO;
+        annotationView.canShowCallout = YES;
         annotationView.image = [UIImage annotationImageForMagnitude:((EarthquakeAnnotation *)annotation).magnitude];
+        annotationView.leftCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeInfoLight];
     }
 
     return annotationView;
