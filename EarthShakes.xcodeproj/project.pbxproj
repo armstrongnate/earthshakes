@@ -22,9 +22,9 @@
 		438DD6551B843F3A0029D92D /* EarthShakeKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6541B843F3A0029D92D /* EarthShakeKitTests.m */; };
 		438DD6581B843F3A0029D92D /* EarthShakeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438DD6411B843F3A0029D92D /* EarthShakeKit.framework */; };
 		438DD6591B843F3A0029D92D /* EarthShakeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 438DD6411B843F3A0029D92D /* EarthShakeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		438DD6681B8443450029D92D /* ESGroupOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6621B8443450029D92D /* ESGroupOperation.h */; };
+		438DD6681B8443450029D92D /* ESGroupOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6621B8443450029D92D /* ESGroupOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		438DD6691B8443450029D92D /* ESGroupOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6631B8443450029D92D /* ESGroupOperation.m */; };
-		438DD66A1B8443450029D92D /* ESOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6641B8443450029D92D /* ESOperation.h */; };
+		438DD66A1B8443450029D92D /* ESOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6641B8443450029D92D /* ESOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		438DD66B1B8443450029D92D /* ESOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6651B8443450029D92D /* ESOperation.m */; };
 		438DD66C1B8443450029D92D /* ESURLSessionTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6661B8443450029D92D /* ESURLSessionTaskOperation.h */; };
 		438DD66D1B8443450029D92D /* ESURLSessionTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6671B8443450029D92D /* ESURLSessionTaskOperation.m */; };
@@ -34,15 +34,22 @@
 		438DD68E1B8448DF0029D92D /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 438DD68C1B8448DF0029D92D /* DataModel.xcdatamodeld */; };
 		438DD6961B8449020029D92D /* ESDownloadEarthquakesOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6901B8449020029D92D /* ESDownloadEarthquakesOperation.h */; };
 		438DD6971B8449020029D92D /* ESDownloadEarthquakesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6911B8449020029D92D /* ESDownloadEarthquakesOperation.m */; };
-		438DD6981B8449020029D92D /* ESGetEarthquakesOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6921B8449020029D92D /* ESGetEarthquakesOperation.h */; };
+		438DD6981B8449020029D92D /* ESGetEarthquakesOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6921B8449020029D92D /* ESGetEarthquakesOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		438DD6991B8449020029D92D /* ESGetEarthquakesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6931B8449020029D92D /* ESGetEarthquakesOperation.m */; };
 		438DD69A1B8449020029D92D /* ESParseEarthquakesOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6941B8449020029D92D /* ESParseEarthquakesOperation.h */; };
 		438DD69B1B8449020029D92D /* ESParseEarthquakesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6951B8449020029D92D /* ESParseEarthquakesOperation.m */; };
 		438DD69F1B8449760029D92D /* ESPersistenceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD69E1B8449760029D92D /* ESPersistenceHelper.m */; };
-		438DD6A21B8449AA0029D92D /* ESPersistenceController.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6A01B8449AA0029D92D /* ESPersistenceController.h */; };
+		438DD6A21B8449AA0029D92D /* ESPersistenceController.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6A01B8449AA0029D92D /* ESPersistenceController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		438DD6A31B8449AA0029D92D /* ESPersistenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6A11B8449AA0029D92D /* ESPersistenceController.m */; };
-		438DD6A61B844D470029D92D /* ESEarthquake.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6A41B844D470029D92D /* ESEarthquake.h */; };
+		438DD6A61B844D470029D92D /* ESEarthquake.h in Headers */ = {isa = PBXBuildFile; fileRef = 438DD6A41B844D470029D92D /* ESEarthquake.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		438DD6A71B844D470029D92D /* ESEarthquake.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6A51B844D470029D92D /* ESEarthquake.m */; };
+		43F94C661B857D41006C4C86 /* EarthquakesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F94C651B857D41006C4C86 /* EarthquakesViewController.m */; };
+		43F94C691B8583BD006C4C86 /* EarthquakesViewController+CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F94C681B8583BD006C4C86 /* EarthquakesViewController+CollectionView.m */; };
+		43F94C6D1B858470006C4C86 /* EarthquakeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F94C6C1B858470006C4C86 /* EarthquakeCollectionViewCell.m */; };
+		43F94C701B859553006C4C86 /* EarthquakeBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F94C6F1B859553006C4C86 /* EarthquakeBehavior.m */; };
+		43F94C741B86B4E9006C4C86 /* EarthquakesFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F94C731B86B4E9006C4C86 /* EarthquakesFlowLayout.m */; };
+		43F94C781B8784E3006C4C86 /* UIColor+MagnitudeColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F94C771B8784E3006C4C86 /* UIColor+MagnitudeColors.m */; };
+		43F94C7A1B878A68006C4C86 /* ESEarthquakeSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F94C791B878A68006C4C86 /* ESEarthquakeSpecs.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +101,7 @@
 		4338529C1B84E55A00B92AE7 /* ESDownloadEarthquakesOperationSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESDownloadEarthquakesOperationSpecs.m; sourceTree = "<group>"; };
 		4338529D1B84E55A00B92AE7 /* ESGetEarthquakesOperationSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESGetEarthquakesOperationSpecs.m; sourceTree = "<group>"; };
 		4338529E1B84E55A00B92AE7 /* ESParseEarthquakesOperationSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESParseEarthquakesOperationSpecs.m; sourceTree = "<group>"; };
+		436F93C11B84EF5D00BD232E /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
 		438DD6131B843BA90029D92D /* EarthShakes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarthShakes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		438DD6171B843BA90029D92D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		438DD6181B843BA90029D92D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -135,6 +143,19 @@
 		438DD6A11B8449AA0029D92D /* ESPersistenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPersistenceController.m; sourceTree = "<group>"; };
 		438DD6A41B844D470029D92D /* ESEarthquake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ESEarthquake.h; path = Models/ESEarthquake.h; sourceTree = "<group>"; };
 		438DD6A51B844D470029D92D /* ESEarthquake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ESEarthquake.m; path = Models/ESEarthquake.m; sourceTree = "<group>"; };
+		43F94C641B857D41006C4C86 /* EarthquakesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EarthquakesViewController.h; path = "View Controllers/EarthquakesViewController.h"; sourceTree = "<group>"; };
+		43F94C651B857D41006C4C86 /* EarthquakesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EarthquakesViewController.m; path = "View Controllers/EarthquakesViewController.m"; sourceTree = "<group>"; };
+		43F94C671B8583BD006C4C86 /* EarthquakesViewController+CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EarthquakesViewController+CollectionView.h"; path = "View Controllers/EarthquakesViewController+CollectionView.h"; sourceTree = "<group>"; };
+		43F94C681B8583BD006C4C86 /* EarthquakesViewController+CollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "EarthquakesViewController+CollectionView.m"; path = "View Controllers/EarthquakesViewController+CollectionView.m"; sourceTree = "<group>"; };
+		43F94C6B1B858470006C4C86 /* EarthquakeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EarthquakeCollectionViewCell.h; path = Views/EarthquakeCollectionViewCell.h; sourceTree = "<group>"; };
+		43F94C6C1B858470006C4C86 /* EarthquakeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EarthquakeCollectionViewCell.m; path = Views/EarthquakeCollectionViewCell.m; sourceTree = "<group>"; };
+		43F94C6E1B859553006C4C86 /* EarthquakeBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EarthquakeBehavior.h; path = Behaviors/EarthquakeBehavior.h; sourceTree = "<group>"; };
+		43F94C6F1B859553006C4C86 /* EarthquakeBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EarthquakeBehavior.m; path = Behaviors/EarthquakeBehavior.m; sourceTree = "<group>"; };
+		43F94C721B86B4E9006C4C86 /* EarthquakesFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EarthquakesFlowLayout.h; path = Views/EarthquakesFlowLayout.h; sourceTree = "<group>"; };
+		43F94C731B86B4E9006C4C86 /* EarthquakesFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EarthquakesFlowLayout.m; path = Views/EarthquakesFlowLayout.m; sourceTree = "<group>"; };
+		43F94C761B8784E3006C4C86 /* UIColor+MagnitudeColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+MagnitudeColors.h"; path = "Helpers/UIColor+MagnitudeColors.h"; sourceTree = "<group>"; };
+		43F94C771B8784E3006C4C86 /* UIColor+MagnitudeColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MagnitudeColors.m"; path = "Helpers/UIColor+MagnitudeColors.m"; sourceTree = "<group>"; };
+		43F94C791B878A68006C4C86 /* ESEarthquakeSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ESEarthquakeSpecs.m; path = Models/ESEarthquakeSpecs.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +230,10 @@
 		438DD6151B843BA90029D92D /* EarthShakes */ = {
 			isa = PBXGroup;
 			children = (
+				43F94C751B8784BC006C4C86 /* Helpers */,
+				43F94C711B85955A006C4C86 /* Behaviors */,
+				43F94C6A1B858455006C4C86 /* Views */,
+				43F94C631B857CD6006C4C86 /* View Controllers */,
 				438DD61A1B843BA90029D92D /* AppDelegate.h */,
 				438DD61B1B843BA90029D92D /* AppDelegate.m */,
 				438DD61D1B843BA90029D92D /* ViewController.h */,
@@ -217,6 +242,7 @@
 				438DD6231B843BA90029D92D /* Images.xcassets */,
 				438DD6251B843BA90029D92D /* LaunchScreen.xib */,
 				438DD6161B843BA90029D92D /* Supporting Files */,
+				436F93C11B84EF5D00BD232E /* Playground.playground */,
 			);
 			path = EarthShakes;
 			sourceTree = "<group>";
@@ -347,8 +373,49 @@
 			children = (
 				438DD69D1B8449760029D92D /* ESPersistenceHelper.h */,
 				438DD69E1B8449760029D92D /* ESPersistenceHelper.m */,
+				43F94C791B878A68006C4C86 /* ESEarthquakeSpecs.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		43F94C631B857CD6006C4C86 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				43F94C641B857D41006C4C86 /* EarthquakesViewController.h */,
+				43F94C651B857D41006C4C86 /* EarthquakesViewController.m */,
+				43F94C671B8583BD006C4C86 /* EarthquakesViewController+CollectionView.h */,
+				43F94C681B8583BD006C4C86 /* EarthquakesViewController+CollectionView.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		43F94C6A1B858455006C4C86 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43F94C6B1B858470006C4C86 /* EarthquakeCollectionViewCell.h */,
+				43F94C6C1B858470006C4C86 /* EarthquakeCollectionViewCell.m */,
+				43F94C721B86B4E9006C4C86 /* EarthquakesFlowLayout.h */,
+				43F94C731B86B4E9006C4C86 /* EarthquakesFlowLayout.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		43F94C711B85955A006C4C86 /* Behaviors */ = {
+			isa = PBXGroup;
+			children = (
+				43F94C6E1B859553006C4C86 /* EarthquakeBehavior.h */,
+				43F94C6F1B859553006C4C86 /* EarthquakeBehavior.m */,
+			);
+			name = Behaviors;
+			sourceTree = "<group>";
+		};
+		43F94C751B8784BC006C4C86 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				43F94C761B8784E3006C4C86 /* UIColor+MagnitudeColors.h */,
+				43F94C771B8784E3006C4C86 /* UIColor+MagnitudeColors.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,9 +619,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F94C781B8784E3006C4C86 /* UIColor+MagnitudeColors.m in Sources */,
 				438DD61F1B843BA90029D92D /* ViewController.m in Sources */,
+				43F94C691B8583BD006C4C86 /* EarthquakesViewController+CollectionView.m in Sources */,
+				43F94C6D1B858470006C4C86 /* EarthquakeCollectionViewCell.m in Sources */,
 				438DD61C1B843BA90029D92D /* AppDelegate.m in Sources */,
 				438DD6191B843BA90029D92D /* main.m in Sources */,
+				43F94C701B859553006C4C86 /* EarthquakeBehavior.m in Sources */,
+				43F94C741B86B4E9006C4C86 /* EarthquakesFlowLayout.m in Sources */,
+				43F94C661B857D41006C4C86 /* EarthquakesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +661,7 @@
 			files = (
 				438DD69F1B8449760029D92D /* ESPersistenceHelper.m in Sources */,
 				4338529F1B84E55A00B92AE7 /* ESDownloadEarthquakesOperationSpecs.m in Sources */,
+				43F94C7A1B878A68006C4C86 /* ESEarthquakeSpecs.m in Sources */,
 				433852A01B84E55A00B92AE7 /* ESGetEarthquakesOperationSpecs.m in Sources */,
 				438DD6701B8444DB0029D92D /* ESURLSessionTaskOperationSpecs.m in Sources */,
 				438DD6551B843F3A0029D92D /* EarthShakeKitTests.m in Sources */,

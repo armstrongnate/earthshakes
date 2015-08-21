@@ -61,14 +61,15 @@
 	[features enumerateObjectsUsingBlock:^(NSDictionary *feature, NSUInteger idx, BOOL *stop) {
 		[self.importContext performBlockAndWait:^{
 
-            ESEarthquake *earthquake = [ESEarthquake insertNewObjectInContext:self.importContext];
-            earthquake.identifier = feature[@"id"];
+            NSString *identifier = feature[@"id"];
+            ESEarthquake *earthquake = [ESEarthquake earthquakeWithIdentifier:identifier inContext:self.importContext];
 
             NSDictionary *props = feature[@"properties"];
 
+            earthquake.place = props[@"place"];
             earthquake.magnitude = props[@"mag"];
             NSNumber *offset = props[@"time"];
-            earthquake.timestamp = offset == nil ? [NSDate dateWithTimeIntervalSince1970:[offset integerValue] / 1000] : [NSDate distantFuture];
+            earthquake.timestamp = offset == nil ? [NSDate dateWithTimeIntervalSince1970:[offset doubleValue] / 1000] : [NSDate distantFuture];
 
             NSDictionary *geometry = feature[@"geometry"];
 

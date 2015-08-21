@@ -6,9 +6,14 @@
 //  Copyright (c) 2015 Nate Armstrong. All rights reserved.
 //
 
+@import EarthShakeKit;
+
 #import "AppDelegate.h"
+#import "EarthquakesViewController.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) ESPersistenceController *persistenceController;
 
 @end
 
@@ -16,7 +21,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	// Override point for customization after application launch.
+    self.persistenceController = [[ESPersistenceController alloc] initWithCallback:^{
+        [self loadUI];
+    }];
+
 	return YES;
 }
 
@@ -40,6 +48,12 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)loadUI
+{
+    EarthquakesViewController *earthquakesVC = (EarthquakesViewController *)self.window.rootViewController;
+    earthquakesVC.context = self.persistenceController.managedObjectContext;
 }
 
 @end

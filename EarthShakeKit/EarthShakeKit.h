@@ -6,7 +6,9 @@
 //  Copyright (c) 2015 Nate Armstrong. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ESEarthquake.h"
+#import "ESGetEarthquakesOperation.h"
+#import "ESPersistenceController.h"
 
 //! Project version number for EarthShakeKit.
 FOUNDATION_EXPORT double EarthShakeKitVersionNumber;
