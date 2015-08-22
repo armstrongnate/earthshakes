@@ -149,7 +149,7 @@
         if ([obj isKindOfClass:[EarthquakeAnnotation class]])
         {
             EarthquakeAnnotation *annotation = (EarthquakeAnnotation *)obj;
-            if ([annotation.title isEqualToString:earthquake.place])
+            if (annotation.earthquake == earthquake)
             {
                 [self.mapView selectAnnotation:annotation animated:YES];
                 *stop = YES;
