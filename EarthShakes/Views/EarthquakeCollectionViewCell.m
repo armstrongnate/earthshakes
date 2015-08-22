@@ -65,7 +65,7 @@
         _magnitudeLabel = [[UILabel alloc] init];
         [_magnitudeLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
         _magnitudeLabel.font = [UIFont boldSystemFontOfSize:60];
-        _magnitudeLabel.textColor = [UIColor colorWithWhite:1.0 alpha:0.4];
+        _magnitudeLabel.textColor = [UIColor colorWithWhite:1.0 alpha:0.5];
         _magnitudeLabel.adjustsFontSizeToFitWidth = YES;
         _magnitudeLabel.minimumScaleFactor = 0.5f;
         _magnitudeLabel.textAlignment = NSTextAlignmentCenter;
@@ -85,6 +85,8 @@
         _placeLabel.textAlignment = NSTextAlignmentCenter;
         _placeLabel.numberOfLines = 0;
         _placeLabel.textColor = [UIColor whiteColor];
+        _placeLabel.shadowColor = [UIColor colorWithWhite:0.3 alpha:1.0];
+        _placeLabel.shadowOffset = CGSizeMake(0.0, 1.0);
     }
     return _placeLabel;
 }
