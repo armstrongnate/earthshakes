@@ -11,6 +11,8 @@
 #import "EarthquakeDetailViewController.h"
 #import "EarthquakeAnnotation.h"
 
+NSInteger const HistoryMaxRadius = 1;
+
 @interface EarthquakeDetailViewController ()
 
 @property (nonatomic, strong) NSDictionary *tableData;
@@ -95,8 +97,7 @@
     if (_queue == nil) _queue = [NSOperationQueue new];
     NSNumber *lat = self.earthquake.latitude;
     NSNumber *lon = self.earthquake.longitude;
-    NSString *urlString = [NSString stringWithFormat:@"http://ehp2-earthquake.wr.usgs.gov/fdsnws/event/1/query?latitude=%@&longitude=%@&maxradius=5&format=geojson", lat, lon];
-    NSLog(@"urlString = %@", urlString);
+    NSString *urlString = [NSString stringWithFormat:@"http://ehp2-earthquake.wr.usgs.gov/fdsnws/event/1/query?latitude=%@&longitude=%@&maxradius=%ld&format=geojson", lat, lon, (long)HistoryMaxRadius];
     NSURL *url = [NSURL URLWithString:urlString];
     ESGetEarthquakesOperation *operation = [[ESGetEarthquakesOperation alloc] initWithContext:self.historyContext url:url completionHandler:^{
 		dispatch_async(dispatch_get_main_queue(), ^{
