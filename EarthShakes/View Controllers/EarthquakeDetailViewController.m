@@ -123,18 +123,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = nil;
-
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"infoCell"];
     if (indexPath.section == 0)
     {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"infoCell"];
         NSString *label = [self.tableData allKeys][indexPath.row];
         cell.textLabel.text = label;
         cell.detailTextLabel.text = [self.tableData objectForKey:label];
     }
     else if (indexPath.section == 1)
     {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"historyCell"];
         NSIndexPath *historyIndexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
         ESEarthquake *historicalEarthquake = [self.fetchedResultsController objectAtIndexPath:historyIndexPath];
         cell.textLabel.text = [self.dateFormatter stringFromDate:historicalEarthquake.timestamp];
