@@ -39,9 +39,6 @@
     UIView *view = self.view;
     MKMapView *mapView = [MKMapView new];
     [mapView setTranslatesAutoresizingMaskIntoConstraints:NO];
-    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(0, 0);
-    MKCoordinateSpan span = MKCoordinateSpanMake(1, 1);
-    mapView.region = MKCoordinateRegionMake(center, span);
     mapView.delegate = self;
     [view addSubview:mapView];
 
