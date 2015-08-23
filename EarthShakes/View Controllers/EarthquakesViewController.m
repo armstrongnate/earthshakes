@@ -32,6 +32,7 @@
 {
     [self layoutMapView];
     [self layoutCollectionView];
+    [self.refreshControl beginRefreshing];
 }
 
 - (void)layoutMapView
