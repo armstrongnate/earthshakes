@@ -12,7 +12,6 @@
 		433852A11B84E55A00B92AE7 /* ESParseEarthquakesOperationSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338529E1B84E55A00B92AE7 /* ESParseEarthquakesOperationSpecs.m */; };
 		438DD6191B843BA90029D92D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6181B843BA90029D92D /* main.m */; };
 		438DD61C1B843BA90029D92D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD61B1B843BA90029D92D /* AppDelegate.m */; };
-		438DD61F1B843BA90029D92D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD61E1B843BA90029D92D /* ViewController.m */; };
 		438DD6221B843BA90029D92D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438DD6201B843BA90029D92D /* Main.storyboard */; };
 		438DD6241B843BA90029D92D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438DD6231B843BA90029D92D /* Images.xcassets */; };
 		438DD6271B843BA90029D92D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438DD6251B843BA90029D92D /* LaunchScreen.xib */; };
@@ -111,8 +110,6 @@
 		438DD6181B843BA90029D92D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		438DD61A1B843BA90029D92D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		438DD61B1B843BA90029D92D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		438DD61D1B843BA90029D92D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		438DD61E1B843BA90029D92D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		438DD6211B843BA90029D92D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		438DD6231B843BA90029D92D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		438DD6261B843BA90029D92D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -248,8 +245,6 @@
 				43F94C631B857CD6006C4C86 /* View Controllers */,
 				438DD61A1B843BA90029D92D /* AppDelegate.h */,
 				438DD61B1B843BA90029D92D /* AppDelegate.m */,
-				438DD61D1B843BA90029D92D /* ViewController.h */,
-				438DD61E1B843BA90029D92D /* ViewController.m */,
 				438DD6201B843BA90029D92D /* Main.storyboard */,
 				438DD6231B843BA90029D92D /* Images.xcassets */,
 				438DD6251B843BA90029D92D /* LaunchScreen.xib */,
@@ -640,7 +635,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				43F94C781B8784E3006C4C86 /* UIColor+MagnitudeColors.m in Sources */,
-				438DD61F1B843BA90029D92D /* ViewController.m in Sources */,
 				43D815A01B88F0550053674B /* EarthquakeDetailViewController.m in Sources */,
 				43F94C691B8583BD006C4C86 /* EarthquakesViewController+CollectionView.m in Sources */,
 				43F94C6D1B858470006C4C86 /* EarthquakeCollectionViewCell.m in Sources */,
