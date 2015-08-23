@@ -48,7 +48,7 @@
     EarthquakeMagnitude magnitude = [earthquake magnitudeCategory];
 
     self.backgroundColor = [UIColor colorForEarthquakeMagnitude:magnitude];
-    self.magnitudeLabel.text = [earthquake.magnitude stringValue];
+    self.magnitudeLabel.text = [NSString stringWithFormat:@"%.1f", [earthquake.magnitude floatValue]];
     self.placeLabel.text = earthquake.place;
 }
 

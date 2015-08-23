@@ -32,7 +32,7 @@
     _earthquake = earthquake;
 
     self.tableData = @{
-                       @"Magnitude" : [earthquake.magnitude stringValue],
+                       @"Magnitude" : [NSString stringWithFormat:@"%.2f", [earthquake.magnitude floatValue]],
                        @"Location" : earthquake.place,
                        @"Lat/Long" : [NSString stringWithFormat:@"%@/%@", earthquake.latitude, earthquake.longitude],
                        @"Date" : [self.dateFormatter stringFromDate:earthquake.timestamp]
@@ -135,7 +135,7 @@
         NSIndexPath *historyIndexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
         ESEarthquake *historicalEarthquake = [self.fetchedResultsController objectAtIndexPath:historyIndexPath];
         cell.textLabel.text = [self.dateFormatter stringFromDate:historicalEarthquake.timestamp];
-        cell.detailTextLabel.text = [historicalEarthquake.magnitude stringValue];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f", [historicalEarthquake.magnitude floatValue]];
     }
 
     return cell;
