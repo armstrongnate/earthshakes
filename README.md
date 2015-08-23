@@ -8,9 +8,7 @@ An iOS application for viewing recent earthquake data using the
 Clone the repo and open/run in Xcode. You will need Xcode or the Command Line Tools installed.
 
 ```
-
 git clone git@github.com:n8armstrong/earthshakes.git
-
 ```
 
 ## Tech Stack
