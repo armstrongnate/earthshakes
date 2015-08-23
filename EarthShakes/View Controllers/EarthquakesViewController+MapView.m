@@ -48,4 +48,9 @@
     }
 }
 
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    [self performSegueWithIdentifier:@"presentEarthquake:" sender:view];
+}
+
 @end

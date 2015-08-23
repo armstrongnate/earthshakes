@@ -45,6 +45,7 @@
 		438DD6A71B844D470029D92D /* ESEarthquake.m in Sources */ = {isa = PBXBuildFile; fileRef = 438DD6A51B844D470029D92D /* ESEarthquake.m */; };
 		43CA84141B87D14400C8E92B /* EarthquakesViewController+MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CA84131B87D14400C8E92B /* EarthquakesViewController+MapView.m */; };
 		43CA84171B87D1E800C8E92B /* UIImage+MagnitudeAnnotationImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CA84161B87D1E800C8E92B /* UIImage+MagnitudeAnnotationImages.m */; };
+		43D815A01B88F0550053674B /* EarthquakeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D8159F1B88F0550053674B /* EarthquakeDetailViewController.m */; };
 		43F94C661B857D41006C4C86 /* EarthquakesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F94C651B857D41006C4C86 /* EarthquakesViewController.m */; };
 		43F94C691B8583BD006C4C86 /* EarthquakesViewController+CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F94C681B8583BD006C4C86 /* EarthquakesViewController+CollectionView.m */; };
 		43F94C6D1B858470006C4C86 /* EarthquakeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F94C6C1B858470006C4C86 /* EarthquakeCollectionViewCell.m */; };
@@ -150,6 +151,8 @@
 		43CA84131B87D14400C8E92B /* EarthquakesViewController+MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "EarthquakesViewController+MapView.m"; path = "View Controllers/EarthquakesViewController+MapView.m"; sourceTree = "<group>"; };
 		43CA84151B87D1E800C8E92B /* UIImage+MagnitudeAnnotationImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+MagnitudeAnnotationImages.h"; path = "Helpers/UIImage+MagnitudeAnnotationImages.h"; sourceTree = "<group>"; };
 		43CA84161B87D1E800C8E92B /* UIImage+MagnitudeAnnotationImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MagnitudeAnnotationImages.m"; path = "Helpers/UIImage+MagnitudeAnnotationImages.m"; sourceTree = "<group>"; };
+		43D8159E1B88F0550053674B /* EarthquakeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EarthquakeDetailViewController.h; path = "View Controllers/EarthquakeDetailViewController.h"; sourceTree = "<group>"; };
+		43D8159F1B88F0550053674B /* EarthquakeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EarthquakeDetailViewController.m; path = "View Controllers/EarthquakeDetailViewController.m"; sourceTree = "<group>"; };
 		43F94C641B857D41006C4C86 /* EarthquakesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EarthquakesViewController.h; path = "View Controllers/EarthquakesViewController.h"; sourceTree = "<group>"; };
 		43F94C651B857D41006C4C86 /* EarthquakesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EarthquakesViewController.m; path = "View Controllers/EarthquakesViewController.m"; sourceTree = "<group>"; };
 		43F94C671B8583BD006C4C86 /* EarthquakesViewController+CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EarthquakesViewController+CollectionView.h"; path = "View Controllers/EarthquakesViewController+CollectionView.h"; sourceTree = "<group>"; };
@@ -396,6 +399,8 @@
 				43F94C681B8583BD006C4C86 /* EarthquakesViewController+CollectionView.m */,
 				43CA84121B87D14400C8E92B /* EarthquakesViewController+MapView.h */,
 				43CA84131B87D14400C8E92B /* EarthquakesViewController+MapView.m */,
+				43D8159E1B88F0550053674B /* EarthquakeDetailViewController.h */,
+				43D8159F1B88F0550053674B /* EarthquakeDetailViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -636,6 +641,7 @@
 			files = (
 				43F94C781B8784E3006C4C86 /* UIColor+MagnitudeColors.m in Sources */,
 				438DD61F1B843BA90029D92D /* ViewController.m in Sources */,
+				43D815A01B88F0550053674B /* EarthquakeDetailViewController.m in Sources */,
 				43F94C691B8583BD006C4C86 /* EarthquakesViewController+CollectionView.m in Sources */,
 				43F94C6D1B858470006C4C86 /* EarthquakeCollectionViewCell.m in Sources */,
 				438DD61C1B843BA90029D92D /* AppDelegate.m in Sources */,

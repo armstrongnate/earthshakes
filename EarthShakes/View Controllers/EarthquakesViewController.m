@@ -9,6 +9,7 @@
 #import "EarthquakesViewController.h"
 #import "EarthquakesViewController+CollectionView.h"
 #import "EarthquakesViewController+MapView.h"
+#import "EarthquakeDetailViewController.h"
 #import "EarthquakeCollectionViewCell.h"
 #import "EarthquakesFlowLayout.h"
 #import "EarthquakeAnnotation.h"
@@ -156,6 +157,24 @@
             }
         }
     }];
+}
+
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"presentEarthquake:"] && [sender isKindOfClass:[MKAnnotationView class]])
+    {
+        EarthquakeAnnotation *annotation = ((MKAnnotationView *)sender).annotation;
+        EarthquakeDetailViewController *detail = ((EarthquakeDetailViewController *)((UINavigationController *)segue.destinationViewController).topViewController);
+        detail.earthquake = annotation.earthquake;
+    }
+}
+
+- (IBAction)unwindFromEarthquake:(UIStoryboardSegue *)segue
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
