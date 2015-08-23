@@ -30,11 +30,17 @@ describe(@"ESEarthquake", ^{
         _earthquake.magnitude = [NSNumber numberWithDouble:2.3];
         expect([_earthquake magnitudeCategory]).to.equal(EarthquakeMagnitudeWeak);
 
-        _earthquake.magnitude = [NSNumber numberWithDouble:5.1];
+        _earthquake.magnitude = [NSNumber numberWithDouble:3.4];
         expect([_earthquake magnitudeCategory]).to.equal(EarthquakeMagnitudeModerate);
 
-        _earthquake.magnitude = [NSNumber numberWithDouble:8.7];
+        _earthquake.magnitude = [NSNumber numberWithDouble:4.7];
         expect([_earthquake magnitudeCategory]).to.equal(EarthquakeMagnitudeStrong);
+
+        _earthquake.magnitude = [NSNumber numberWithDouble:5.1];
+        expect([_earthquake magnitudeCategory]).to.equal(EarthquakeMagnitudeViolent);
+
+        _earthquake.magnitude = [NSNumber numberWithDouble:8.7];
+        expect([_earthquake magnitudeCategory]).to.equal(EarthquakeMagnitudeViolent);
 
         _earthquake.magnitude = [NSNumber numberWithDouble:9.5];
         expect([_earthquake magnitudeCategory]).to.equal(EarthquakeMagnitudeViolent);

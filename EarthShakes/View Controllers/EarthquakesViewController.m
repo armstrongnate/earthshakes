@@ -110,7 +110,8 @@
 - (void)getEarthquakes
 {
     if (_queue == nil) _queue = [NSOperationQueue new];
-	ESGetEarthquakesOperation *operation = [[ESGetEarthquakesOperation alloc] initWithContext:self.context completionHandler:^{
+    NSURL *url = [NSURL URLWithString:@"http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson"];
+    ESGetEarthquakesOperation *operation = [[ESGetEarthquakesOperation alloc] initWithContext:self.context url:url completionHandler:^{
 		dispatch_async(dispatch_get_main_queue(), ^{
             [self.refreshControl endRefreshing];
 			[self updateUI];

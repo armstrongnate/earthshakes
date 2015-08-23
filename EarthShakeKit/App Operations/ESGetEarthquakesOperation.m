@@ -12,7 +12,7 @@
 
 @implementation ESGetEarthquakesOperation
 
-- (instancetype)initWithContext:(NSManagedObjectContext *)context completionHandler:(void (^)())completion
+- (instancetype)initWithContext:(NSManagedObjectContext *)context url:(NSURL *)url completionHandler:(void (^)())completion
 {
 	if (!(self = [super initWithOperations:@[]])) return nil;
 
@@ -22,9 +22,9 @@
 													   appropriateForURL:nil
 																  create:nil
 																   error:nil];
-	NSURL *cacheFile = [cacheFolder URLByAppendingPathComponent:@"members.json"];
+	NSURL *cacheFile = [cacheFolder URLByAppendingPathComponent:@"earthquakes.json"];
 
-	ESDownloadEarthquakesOperation *downloadOperation = [[ESDownloadEarthquakesOperation alloc] initWithCacheFile:cacheFile];
+    ESDownloadEarthquakesOperation *downloadOperation = [[ESDownloadEarthquakesOperation alloc] initWithURL:url cacheFile:cacheFile];
 	[self addOperation:downloadOperation];
 
 	ESParseEarthquakesOperation *parseOperation = [[ESParseEarthquakesOperation alloc] initWithCacheFile:cacheFile context:context];

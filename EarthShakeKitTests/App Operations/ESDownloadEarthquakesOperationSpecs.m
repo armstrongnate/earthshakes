@@ -29,7 +29,8 @@ describe(@"ESDownloadEarthquakesOperationSpec", ^{
     		NSOperationQueue *queue = [NSOperationQueue new];
 			queue.suspended = true;
 
-    		downloadOperation = [[ESDownloadEarthquakesOperation alloc] initWithCacheFile:cacheFile];
+            NSURL *url = [NSURL URLWithString:@"http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson"];
+            downloadOperation = [[ESDownloadEarthquakesOperation alloc] initWithURL:url cacheFile:cacheFile];
 			[queue addOperation:downloadOperation];
 
 			NSOperation *doneOperation = [NSBlockOperation blockOperationWithBlock:done];

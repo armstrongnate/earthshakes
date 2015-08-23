@@ -17,7 +17,7 @@
 
 @implementation ESDownloadEarthquakesOperation
 
-- (instancetype)initWithCacheFile:(NSURL *)cacheFile
+- (instancetype)initWithURL:(NSURL *)url cacheFile:(NSURL *)cacheFile
 {
 	if (!(self = [super initWithOperations:@[]])) return nil;
 
@@ -28,7 +28,6 @@
 		[[NSFileManager defaultManager] removeItemAtPath:cacheFile.path error:nil];
 	}
 
-    NSURL *url = [NSURL URLWithString:@"http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson"];
 	NSURLSessionTask *task = [[NSURLSession sharedSession] downloadTaskWithURL:url completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
 		[self downloadFinishedWithURL:url response:(NSHTTPURLResponse *)response error:error];
 	}];

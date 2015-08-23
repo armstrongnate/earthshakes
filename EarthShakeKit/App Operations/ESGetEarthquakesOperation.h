@@ -12,6 +12,6 @@
 
 @interface ESGetEarthquakesOperation : ESGroupOperation
 
-- (instancetype)initWithContext:(NSManagedObjectContext *)context completionHandler:(void(^)())completion;
+- (instancetype)initWithContext:(NSManagedObjectContext *)context url:(NSURL *)url completionHandler:(void (^)())completion;
 
 @end

@@ -10,6 +10,6 @@
 
 @interface ESDownloadEarthquakesOperation : ESGroupOperation
 
-- (instancetype)initWithCacheFile:(NSURL *)cacheFile;
+- (instancetype)initWithURL:(NSURL *)url cacheFile:(NSURL *)cacheFile;
 
 @end

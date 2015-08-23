@@ -27,15 +27,17 @@ describe(@"ESGetEarthquakesOperation", ^{
 		[context reset];
 	});
 
-	it(@"is initialized with a context and completion handler", ^{
-		ESGetEarthquakesOperation *getOperation = [[ESGetEarthquakesOperation alloc] initWithContext:context completionHandler:nil];
+	it(@"is initialized with a context, url, and completion handler", ^{
+        NSURL *url = [NSURL URLWithString:@"http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson"];
+        ESGetEarthquakesOperation *getOperation = [[ESGetEarthquakesOperation alloc] initWithContext:context url:url completionHandler:nil];
 		expect(getOperation).toNot.beNil();
 	});
 
 	it(@"should finish", ^{
 		waitUntil(^(DoneCallback done) {
 			NSOperationQueue *queue = [NSOperationQueue new];
-    		ESGetEarthquakesOperation *getOperation = [[ESGetEarthquakesOperation alloc] initWithContext:context completionHandler:done];
+            NSURL *url = [NSURL URLWithString:@"http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson"];
+            ESGetEarthquakesOperation *getOperation = [[ESGetEarthquakesOperation alloc] initWithContext:context url:url completionHandler:done];
 			[queue addOperation:getOperation];
 		});
         expect(context.insertedObjects.count > 0).to.beTruthy();

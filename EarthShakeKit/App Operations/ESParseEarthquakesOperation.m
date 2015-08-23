@@ -69,7 +69,7 @@
             earthquake.place = props[@"place"];
             earthquake.magnitude = props[@"mag"];
             NSNumber *offset = props[@"time"];
-            earthquake.timestamp = offset == nil ? [NSDate dateWithTimeIntervalSince1970:[offset doubleValue] / 1000] : [NSDate distantFuture];
+            earthquake.timestamp = offset != nil ? [NSDate dateWithTimeIntervalSince1970:[offset doubleValue] / 1000] : [NSDate distantFuture];
 
             NSDictionary *geometry = feature[@"geometry"];
 

@@ -14,6 +14,10 @@
 @interface EarthquakeDetailViewController ()
 
 @property (nonatomic, strong) NSDictionary *tableData;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSManagedObjectContext *historyContext;
+@property (nonatomic, strong) NSOperationQueue *queue;
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
 
 @end
 
@@ -27,15 +31,81 @@
 {
     _earthquake = earthquake;
 
-    NSDateFormatter *formatter = [NSDateFormatter new];
-    formatter.dateStyle = NSDateFormatterMediumStyle;
-    formatter.timeStyle = NSDateFormatterMediumStyle;
     self.tableData = @{
                        @"Magnitude" : [earthquake.magnitude stringValue],
                        @"Location" : earthquake.place,
                        @"Lat/Long" : [NSString stringWithFormat:@"%@/%@", earthquake.latitude, earthquake.longitude],
-                       @"Date" : [formatter stringFromDate:earthquake.timestamp]
-   };
+                       @"Date" : [self.dateFormatter stringFromDate:earthquake.timestamp]
+    };
+    [self getHistory];
+}
+
+- (NSFetchedResultsController *)fetchedResultsController
+{
+    if (!_fetchedResultsController)
+    {
+    	NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:[ESEarthquake entityName]];
+    	request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"timestamp"
+    															  ascending:NO
+    															   selector:nil]];
+        request.fetchLimit = 100;
+    	self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
+                                                                            managedObjectContext:self.historyContext
+    																		  sectionNameKeyPath:nil
+    																				   cacheName:nil];
+    }
+
+    return _fetchedResultsController;
+}
+
+- (NSManagedObjectContext *)historyContext
+{
+    if (!_historyContext)
+    {
+        // In memory context
+    	NSURL *modelURL = [[NSBundle bundleForClass:[ESPersistenceController class]] URLForResource:@"DataModel" withExtension:@"momd"];
+    	NSManagedObjectModel *mom = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    	NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:mom];
+    	NSError *error = nil;
+    	if (![coordinator addPersistentStoreWithType:NSInMemoryStoreType configuration:nil URL:nil options:nil error:&error])
+    	{
+    		NSLog(@"Error: %@", error);
+    	}
+        _historyContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+        _historyContext.persistentStoreCoordinator = coordinator;
+    }
+
+    return _historyContext;
+}
+
+- (NSDateFormatter *)dateFormatter
+{
+    if (!_dateFormatter)
+    {
+        _dateFormatter = [NSDateFormatter new];
+        _dateFormatter.dateStyle = NSDateFormatterMediumStyle;
+        _dateFormatter.timeStyle = NSDateFormatterMediumStyle;
+    }
+
+    return _dateFormatter;
+}
+
+- (void)getHistory
+{
+    if (_queue == nil) _queue = [NSOperationQueue new];
+    NSNumber *lat = self.earthquake.latitude;
+    NSNumber *lon = self.earthquake.longitude;
+    NSString *urlString = [NSString stringWithFormat:@"http://ehp2-earthquake.wr.usgs.gov/fdsnws/event/1/query?latitude=%@&longitude=%@&maxradius=5&format=geojson", lat, lon];
+    NSLog(@"urlString = %@", urlString);
+    NSURL *url = [NSURL URLWithString:urlString];
+    ESGetEarthquakesOperation *operation = [[ESGetEarthquakesOperation alloc] initWithContext:self.historyContext url:url completionHandler:^{
+		dispatch_async(dispatch_get_main_queue(), ^{
+            NSError *error = nil;
+            [self.fetchedResultsController performFetch:&error];
+			[self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
+		});
+	}];
+	[self.queue addOperation:operation];
 }
 
 
@@ -43,12 +113,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.tableData allKeys].count;
+    return section == 0 ? [self.tableData allKeys].count : [self.fetchedResultsController fetchedObjects].count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,6 +131,14 @@
         NSString *label = [self.tableData allKeys][indexPath.row];
         cell.textLabel.text = label;
         cell.detailTextLabel.text = [self.tableData objectForKey:label];
+    }
+    else if (indexPath.section == 1)
+    {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"historyCell"];
+        NSIndexPath *historyIndexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:0];
+        ESEarthquake *historicalEarthquake = [self.fetchedResultsController objectAtIndexPath:historyIndexPath];
+        cell.textLabel.text = [self.dateFormatter stringFromDate:historicalEarthquake.timestamp];
+        cell.detailTextLabel.text = [historicalEarthquake.magnitude stringValue];
     }
 
     return cell;
@@ -89,7 +167,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 180.0;
+    return section == 0 ? 180 : 34;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section == 1) return @"History";
+    return nil;
 }
 
 @end
