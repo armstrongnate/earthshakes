@@ -16,3 +16,13 @@ git clone git@github.com:n8armstrong/earthshakes.git
 - Objective-C
 - [Carthage](https://github.com/Carthage/Carthage)
 - [Specta](https://github.com/specta/specta) and [Expecta](https://github.com/specta/expecta) for tests
+
+## Screenshots
+
+<img src="./screenshots/main.png" width="350px" />
+&nbsp;
+&nbsp;
+<img src="./screenshots/selected.png" width="350px" />
+&nbsp;
+&nbsp;
+<img src="./screenshots/detail.png" width="350px" />
