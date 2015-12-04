@@ -14,8 +14,11 @@ git clone git@github.com:n8armstrong/earthshakes.git
 ## Tech Stack
 
 - Objective-C
-- [Carthage](https://github.com/Carthage/Carthage)
-- [Specta](https://github.com/specta/specta) and [Expecta](https://github.com/specta/expecta) for tests
+- [Carthage](https://github.com/Carthage/Carthage) (package manager)
+- [Specta](https://github.com/specta/specta) and [Expecta](https://github.com/specta/expecta) (tests)
+- Core Data (persistence)
+- Map Kit
+- NSOperation (async tasks)
 
 ## Screenshots
 
